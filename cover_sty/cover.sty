@@ -1,0 +1,72 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cover}
+%
+%紙面の高さに関する設定
+\setlength{\textheight}{\paperheight}
+\setlength{\topmargin}{16.6truemm}
+\setlength{\headheight}{0truemm}
+\setlength{\headsep}{0truemm}
+\setlength{\footskip}{0truemm}
+\addtolength{\textheight}{-80truemm}
+%紙面の幅に関する設定
+\setlength{\textwidth}{\paperwidth}
+\setlength{\oddsidemargin}{7.6truemm}
+\addtolength{\textwidth}{-66truemm}
+%文字サイズ小
+\def\mysmall{\fontsize{5truemm}{0truemm}\selectfont}
+%表紙上部分の成形
+\newcommand\covertop[7]
+{
+\fontsize{6truemm}{0truemm}\selectfont
+\kanjiskip=.3truemm plus 3pt minus 3pt
+\xkanjiskip=.3truemm plus 3pt minus 3pt
+\thispagestyle{empty}
+%
+\hfil\vbox to8mm{\hbox to30mm{報告書}\hrule height .8mm}\hfil
+\vspace{18mm}
+\vbox to8mm{\hbox to\textwidth{実験名　　　電子制御実験１（後期）\hfil}\hrule height .8mm}\hfil
+\vspace{4mm}
+\vbox to8mm{\hbox to\textwidth{実験題目\hfil{#1}\hfil}\hrule height .8mm}\hfil
+\vspace{15mm}
+\hbox to\textwidth{\vbox to 8mm{\hbox to34mm{気象条件}\hrule height .8mm}\hfil
+\vbox to8mm{\hbox to89mm{\mysmall{天候　#2　　　温度　#3　　　湿度　#4　　　}\hfil}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\vbox to8mm{\hbox to31mm{実験年月日}\hrule height .8mm}\hfil
+\vbox to8mm{\hbox to 76mm{\mysmall{平成　　　#5 年　　　#6 月　　　#7 日}\hfil}\hrule height .6mm}}\hfil
+\vspace{28mm}
+}
+%表紙中ほどの成形
+\newcommand\covercenter[6]
+{
+\fontsize{6truemm}{0truemm}\selectfont
+\kanjiskip=.3truemm plus 3pt minus 3pt
+\xkanjiskip=.3truemm plus 3pt minus 3pt
+%
+\hbox to\textwidth{\vbox to8mm{\hbox{提出年月日}\hrule height.8mm}\hfil
+\vbox to8mm{\hbox to76mm{\mysmall{平成　　　#1 年　　　#2 月　　　#3 日}\hfill}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\vbox to8mm{\hbox to43mm{学年及び班番号}\hrule height .8mm}\hfill
+\vbox to8mm{\hbox to76mm{\mysmall{電子制御工学科　　4 年　　#4 班}\hfil}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\vbox to8mm{\hbox to31mm{報告者}\hrule height .8mm}\hfil
+\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No. #5\hfil}氏名　#6}\hfil}\hrule height .6mm}}\hfil
+\vspace{15mm}
+}
+%表紙下部分の成形
+\newcommand\coverbottom[8]
+{
+\fontsize{6truemm}{0truemm}\selectfont
+\kanjiskip=.3truemm plus 3pt minus 3pt
+\xkanjiskip=.3truemm plus 3pt minus 3pt
+%
+\hbox to\textwidth{\vbox to8mm{\hbox to31mm{班員}\hrule height .8mm}\hfil
+\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No. #1\hfil}氏名　#2}\hfill}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\hfil\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No. #3\hfil}氏名　#4}\hfil}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\hfil\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No. #5\hfil}氏名　#6}\hfil}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\hfil\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No. #7\hfil}氏名　#8}\hfil}\hrule height .6mm}}\hfil
+\vspace{4mm}
+\hbox to\textwidth{\hfil\vbox to8mm{\hbox to76mm{\mysmall{\hbox to26mm{No.　\hfil}氏名}\hfil}\hrule height .6mm}}\hfil
+}
